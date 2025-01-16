@@ -153,13 +153,60 @@ view(df)
 aba_spp <- df %>% 
   group_by(Species) 
   
-ggplot(aba_spp, aes(Year, Pounds, fill = Species, fill = Species, color = Species)) +
-  geom_bar(stat = "identity", position=position_dodge(width=.9)) +
-  scale_color_manual(values = c("black","green","pink","red","blue","purple","white" )) +
+ggplot(aba_spp, aes(Year, Pounds, fill = Species, color = Species)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  scale_fill_manual(values = c("black", "green", "pink", "red", "blue", "purple", "white")) +
+  scale_color_manual(values = c("black", "green", "pink", "red", "blue", "purple", "white")) +
   labs(x = "Year", y = "Pounds of Abalone")
+# ouchie eyeballs
+
 
 ggplot(aba_spp, aes(Year, Pounds, color = Species, group = Species)) +
   geom_line(size = 1) +
-  scale_color_manual(values = c("black", "green", "pink", "red", "blue", "purple", "white")) +
+  scale_color_manual(values = c("black", "lightgreen", "hotpink", "red", "blue", "purple", "white")) +
   labs(x = "Year", y = "Pounds of Abalone")
+ggsave(filename = "AbalonePounds_Line.png", path = here("output/"), width = 4, height = 4, units = "in", dpi = 300)
 
+# 11) EXAMPLE: VO2 max
+#Now try to create the appropriate graph for the relationship between time to run a mile and oxygen consumption, using the dataset VO2 max vs runtime.csv.
+#What type of graph would you use? Scatterplot with a fitted line and standard error buffer
+
+df <- read_csv(here("data/LabA/VO2 max vs runtime.csv"))
+head(df)
+view(df)
+
+colnames(df) = c("VO2 max", "Runtime")
+
+ggplot(df, aes(Runtime, `VO2 max`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color = "blue") +
+  labs(x = "Runtime (minutes per mile)", y = "VO2 Max (oxygen consumption, ml/(kg x min)") +
+  theme_minimal()
+ggsave(filename = "VO2_Runtime_Line.png", path = here("output/"), width = 4, height = 4, units = "in", dpi = 300)
+
+# 12) Limpet Size
+
+df <- read_csv(here("data/LabA/Limpet size.csv"))
+head(df)
+
+ggplot(df, aes(x=limpetsize))+
+  geom_histogram() +
+  labs(x = "Limpet Size")
+
+# 13) Whales
+
+df <- read_csv(here("data/LabA/Blue whale abundance.csv"))
+head(df)
+str(df)
+
+ggplot(df, aes(x = Location, y = `Number of Whales`, fill = Period)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(x = "Location", y = "Number of Whales") +
+  theme_minimal()
+
+df$Period = factor(df$Period,levels=c("Pre-whaling","Current"))
+
+ggplot(df,aes(x=Location, y=`Number of Whales`, fill=Period))+
+  geom_bar(stat="identity",position=position_dodge())+
+  theme(axis.text.x=element_text(angle=90))
+ggsave(filename = "WhalesPreCurrent.png", path = here("output/", width = 4, height = 4))
