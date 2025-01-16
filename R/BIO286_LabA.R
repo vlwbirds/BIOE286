@@ -210,3 +210,52 @@ ggplot(df,aes(x=Location, y=`Number of Whales`, fill=Period))+
   geom_bar(stat="identity",position=position_dodge())+
   theme(axis.text.x=element_text(angle=90))
 ggsave(filename = "WhalesPreCurrent.png", path = here("output/", width = 4, height = 4))
+
+# 14) Urchin/Kelp Map
+
+library(ggmap)
+library(mapdata)
+
+dat <- read_csv(here("data/LabA/Urchin kelp Lat Long.csv"))
+head(dat)
+
+ylim=range(dat$LAT) #find latitude limits of data to inform map
+xlim=range(dat$LONG) #find longitude limits of data to inform map
+
+#world map data
+w=map_data("worldHires",ylim=ylim,xlim=xlim) #extract map data
+
+#make the urchin plot
+z=ggplot()+ #make an empty plot
+  labs(y= "Latitude (deg)", x = "Longitude (deg)")+
+  geom_polygon(data=w,aes(x=long,y=lat,group=group),fill="grey30")+
+  coord_fixed(1.5,xlim=xlim,ylim=ylim)+
+  geom_point(dat,mapping=aes(x=LONG,y=LAT,size=Urchins))+
+  scale_size(range = c(0, 3))+
+  theme(axis.text.x=element_text(angle=90))
+
+#display the plot
+z
+
+ggsave(filename = "SitkaUrchinsAllYears.png", path = here("output/"), width = 4, height = 5)
+
+# creating facet grid map
+z+facet_grid(.~Year)
+ggsave(filename = "SitkaUrchinsSplitYears.png", path = here("output/"), width = 4, height = 5)
+
+z+facet_grid(Year~.)
+
+# What pattern do you see? There were more Urchins in 1988, but after they declined, their population leveled out to relatively stable level
+
+#plot Kelp
+z=ggplot()+
+  labs(y= "Latitude (deg)", x = "Longitude (deg)")+
+  geom_polygon(data=w,aes(x=long,y=lat,group=group),fill="grey30")+
+  coord_fixed(1.5,xlim=xlim,ylim=ylim)+
+  geom_point(dat,mapping=aes(x=LONG,y=LAT,size=Kelp))+
+  scale_size(range = c(0, 3))+
+  theme(axis.text.x=element_text(angle=90))
+z+facet_grid(.~ Year)
+
+# What is the pattern? > How do the graphs help you understand the patterns?
+# The pattern here is that Kelp were less prevalent in the 1988 plot compared to the others, which may suggest that there is.a relationship between urchin populations and kelp abundance.
