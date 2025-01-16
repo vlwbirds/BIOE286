@@ -153,8 +153,13 @@ view(df)
 aba_spp <- df %>% 
   group_by(Species) 
   
-ggplot(aba_spp, aes(Year, Pounds, fill = Species)) +
+ggplot(aba_spp, aes(Year, Pounds, fill = Species, fill = Species, color = Species)) +
   geom_bar(stat = "identity", position=position_dodge(width=.9)) +
-  labs(x = "Year", Y = "Pounds of Abalone")
+  scale_color_manual(values = c("black","green","pink","red","blue","purple","white" )) +
+  labs(x = "Year", y = "Pounds of Abalone")
 
+ggplot(aba_spp, aes(Year, Pounds, color = Species, group = Species)) +
+  geom_line(size = 1) +
+  scale_color_manual(values = c("black", "green", "pink", "red", "blue", "purple", "white")) +
+  labs(x = "Year", y = "Pounds of Abalone")
 
