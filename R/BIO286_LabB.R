@@ -103,3 +103,21 @@ head(
     group_by(mfr)
 )
 
+cereal %>%
+  group_by(mfr) %>%
+  summarise(mean_sugars = mean(sugars))
+
+mean(c(2,5,900,NA,60))
+mean(c(2,5,900,NA,60),na.rm=TRUE)
+str(cereal$mfr)
+str(cereal$sugars)
+
+out=aggregate(sugars~mfr,data=cereal,FUN="mean")
+out
+
+cereal %>%
+  group_by(mfr) %>%
+  summarise(mean_sugars = mean(sugars),
+            mean_calories = mean(calories))
+
+# G pivot_longer() & pivot_wider
