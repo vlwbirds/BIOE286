@@ -1,0 +1,23 @@
+"Neighborhood","City","UI_500M","species","mosq"
+"Afanayoa I","Yaounde",0,"A. aegypti",0
+"Zamassi","Yaounde",1,"A. aegypti",0
+"Afanayoa II","Yaounde",2,"A. aegypti",1
+"Nkolbisson","Yaounde",43,"A. aegypti",0
+"Tsinga","Yaounde",58,"A. aegypti",1
+"Messa","Yaounde",81,"A. aegypti",21
+"Mendong","Yaounde",85,"A. aegypti",0
+"Mfandena","Yaounde",85,"A. aegypti",0
+"Omnisport","Yaounde",85,"A. aegypti",1
+"Mvog-Ada","Yaounde",93,"A. aegypti",4
+"Essos","Yaounde",98,"A. aegypti",1
+"Afanayoa I","Yaounde",0,"A. albopictus",44
+"Zamassi","Yaounde",1,"A. albopictus",3
+"Afanayoa II","Yaounde",2,"A. albopictus",8
+"Nkolbisson","Yaounde",43,"A. albopictus",60
+"Tsinga","Yaounde",58,"A. albopictus",55
+"Messa","Yaounde",81,"A. albopictus",56
+"Mendong","Yaounde",85,"A. albopictus",83
+"Mfandena","Yaounde",85,"A. albopictus",102
+"Omnisport","Yaounde",85,"A. albopictus",246
+"Mvog-Ada","Yaounde",93,"A. albopictus",84
+"Essos","Yaounde",98,"A. albopictus",81

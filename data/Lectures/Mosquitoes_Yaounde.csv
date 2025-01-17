@@ -1,0 +1,195 @@
+"Neighborhood","Date","UI_500M","Temperature","Rainfall","species","mosq"
+"Zamassi","1/29/2021",1,30,53,"A. albopictus",0
+"Zamassi","1/29/2021",1,30,53,"A. aegypti",1
+"Zamassi","1/18/2021",1,28,53,"A. albopictus",2
+"Zamassi","1/18/2021",1,28,53,"A. aegypti",0
+"Zamassi","11/13/2020",1,28,455,"A. albopictus",3
+"Zamassi","11/13/2020",1,28,455,"A. aegypti",0
+"Zamassi","4/16/2021",1,26,276,"A. albopictus",8
+"Zamassi","4/16/2021",1,26,276,"A. aegypti",0
+"Zamassi","6/14/2021",1,25,474,"A. albopictus",2
+"Zamassi","6/14/2021",1,25,474,"A. aegypti",0
+"Zamassi","11/18/2020",1,25,455,"A. albopictus",3
+"Zamassi","11/18/2020",1,25,455,"A. aegypti",0
+"Zamassi","5/18/2021",1,23,291,"A. albopictus",7
+"Zamassi","5/18/2021",1,23,291,"A. aegypti",0
+"Zamassi","7/28/2021",1,23,353,"A. albopictus",1
+"Zamassi","7/28/2021",1,23,353,"A. aegypti",0
+"Zamassi","12/16/2020",1,23,191,"A. albopictus",0
+"Zamassi","12/16/2020",1,23,191,"A. aegypti",0
+"Zamassi","9/11/2020",1,23,152,"A. albopictus",2
+"Zamassi","9/11/2020",1,23,152,"A. aegypti",1
+"Tsinga","1/26/2021",58,32,53,"A. albopictus",23
+"Tsinga","1/26/2021",58,32,53,"A. aegypti",0
+"Tsinga","2/16/2021",58,31,20,"A. albopictus",10
+"Tsinga","2/16/2021",58,31,20,"A. aegypti",0
+"Tsinga","12/10/2020",58,30,191,"A. albopictus",65
+"Tsinga","12/10/2020",58,30,191,"A. aegypti",0
+"Tsinga","4/17/2021",58,27,276,"A. albopictus",23
+"Tsinga","4/17/2021",58,27,276,"A. aegypti",0
+"Tsinga","2/22/2021",58,26,20,"A. albopictus",10
+"Tsinga","2/22/2021",58,26,20,"A. aegypti",1
+"Tsinga","4/14/2021",58,26,276,"A. albopictus",39
+"Tsinga","4/14/2021",58,26,276,"A. aegypti",0
+"Tsinga","5/12/2021",58,25,291,"A. albopictus",80
+"Tsinga","5/12/2021",58,25,291,"A. aegypti",5
+"Tsinga","5/19/2021",58,25,291,"A. albopictus",20
+"Tsinga","5/19/2021",58,25,291,"A. aegypti",0
+"Tsinga","6/11/2021",58,25,474,"A. albopictus",53
+"Tsinga","6/11/2021",58,25,474,"A. aegypti",0
+"Tsinga","7/27/2021",58,24,353,"A. albopictus",105
+"Tsinga","7/27/2021",58,24,353,"A. aegypti",0
+"Tsinga","2/1/2021",58,23,20,"A. albopictus",66
+"Tsinga","2/1/2021",58,23,20,"A. aegypti",0
+"Tsinga","9/15/2020",58,23,152,"A. albopictus",120
+"Tsinga","9/15/2020",58,23,152,"A. aegypti",1
+"Tsinga","11/12/2020",58,22,455,"A. albopictus",107
+"Tsinga","11/12/2020",58,22,455,"A. aegypti",2
+"Omnisport","4/13/2021",85,26,276,"A. albopictus",303
+"Omnisport","4/13/2021",85,26,276,"A. aegypti",3
+"Omnisport","5/11/2021",85,26,291,"A. albopictus",308
+"Omnisport","5/11/2021",85,26,291,"A. aegypti",1
+"Omnisport","6/9/2021",85,24.5,474,"A. albopictus",508
+"Omnisport","6/9/2021",85,24.5,474,"A. aegypti",0
+"Omnisport","2/15/2021",85,24,20,"A. albopictus",9
+"Omnisport","2/15/2021",85,24,20,"A. aegypti",0
+"Omnisport","7/23/2021",85,24,353,"A. albopictus",102
+"Omnisport","7/23/2021",85,24,353,"A. aegypti",0
+"Nkolbisson","1/28/2021",43,31,53,"A. albopictus",40
+"Nkolbisson","1/28/2021",43,31,53,"A. aegypti",0
+"Nkolbisson","2/17/2021",43,29,20,"A. albopictus",0
+"Nkolbisson","2/17/2021",43,29,20,"A. aegypti",0
+"Nkolbisson","11/12/2020",43,28,455,"A. albopictus",69
+"Nkolbisson","11/12/2020",43,28,455,"A. aegypti",0
+"Nkolbisson","4/16/2021",43,27,276,"A. albopictus",78
+"Nkolbisson","4/16/2021",43,27,276,"A. aegypti",0
+"Nkolbisson","4/18/2021",43,27,276,"A. albopictus",24
+"Nkolbisson","4/18/2021",43,27,276,"A. aegypti",0
+"Nkolbisson","1/28/2021",43,27,53,"A. albopictus",32
+"Nkolbisson","1/28/2021",43,27,53,"A. aegypti",0
+"Nkolbisson","11/19/2020",43,27,455,"A. albopictus",115
+"Nkolbisson","11/19/2020",43,27,455,"A. aegypti",1
+"Nkolbisson","6/10/2021",43,26.5,474,"A. albopictus",29
+"Nkolbisson","6/10/2021",43,26.5,474,"A. aegypti",0
+"Nkolbisson","5/17/2021",43,26,291,"A. albopictus",25
+"Nkolbisson","5/17/2021",43,26,291,"A. aegypti",0
+"Nkolbisson","2/18/2021",43,25,20,"A. albopictus",4
+"Nkolbisson","2/18/2021",43,25,20,"A. aegypti",0
+"Nkolbisson","5/14/2021",43,25,291,"A. albopictus",157
+"Nkolbisson","5/14/2021",43,25,291,"A. aegypti",0
+"Nkolbisson","7/29/2021",43,25,353,"A. albopictus",22
+"Nkolbisson","7/29/2021",43,25,353,"A. aegypti",0
+"Nkolbisson","2/22/2021",43,24,20,"A. albopictus",36
+"Nkolbisson","2/22/2021",43,24,20,"A. aegypti",0
+"Nkolbisson","6/15/2021",43,24,474,"A. albopictus",145
+"Nkolbisson","6/15/2021",43,24,474,"A. aegypti",0
+"Nkolbisson","12/14/2020",43,23,191,"A. albopictus",35
+"Nkolbisson","12/14/2020",43,23,191,"A. aegypti",0
+"Nkolbisson","7/27/2021",43,22,353,"A. albopictus",51
+"Nkolbisson","7/27/2021",43,22,353,"A. aegypti",0
+"Nkolbisson","9/10/2020",43,22,152,"A. albopictus",151
+"Nkolbisson","9/10/2020",43,22,152,"A. aegypti",3
+"Mvog-Ada","6/10/2021",93,26,474,"A. albopictus",122
+"Mvog-Ada","6/10/2021",93,26,474,"A. aegypti",2
+"Mvog-Ada","2/16/2021",93,25,20,"A. albopictus",32
+"Mvog-Ada","2/16/2021",93,25,20,"A. aegypti",1
+"Mvog-Ada","11/16/2020",93,24,455,"A. albopictus",150
+"Mvog-Ada","11/16/2020",93,24,455,"A. aegypti",4
+"Mvog-Ada","5/18/2021",93,23.5,291,"A. albopictus",53
+"Mvog-Ada","5/18/2021",93,23.5,291,"A. aegypti",9
+"Mvog-Ada","4/14/2021",93,23,276,"A. albopictus",75
+"Mvog-Ada","4/14/2021",93,23,276,"A. aegypti",0
+"Mvog-Ada","7/26/2021",93,21,353,"A. albopictus",115
+"Mvog-Ada","7/26/2021",93,21,353,"A. aegypti",8
+"Mvog-Ada","9/14/2020",93,21,152,"A. albopictus",40
+"Mvog-Ada","9/14/2020",93,21,152,"A. aegypti",3
+"Mfandena","11/18/2020",85,28,455,"A. albopictus",216
+"Mfandena","11/18/2020",85,28,455,"A. aegypti",0
+"Mfandena","9/10/2020",85,26,152,"A. albopictus",13
+"Mfandena","9/10/2020",85,26,152,"A. aegypti",0
+"Mfandena","11/14/2020",85,22,455,"A. albopictus",78
+"Mfandena","11/14/2020",85,22,455,"A. aegypti",0
+"Messa","12/14/2020",81,31,191,"A. albopictus",107
+"Messa","12/14/2020",81,31,191,"A. aegypti",1
+"Messa","6/16/2021",81,24,474,"A. albopictus",34
+"Messa","6/16/2021",81,24,474,"A. aegypti",39
+"Messa","11/17/2020",81,24,455,"A. albopictus",96
+"Messa","11/17/2020",81,24,455,"A. aegypti",3
+"Messa","9/16/2020",81,23,152,"A. albopictus",23
+"Messa","9/16/2020",81,23,152,"A. aegypti",10
+"Messa","4/15/2021",81,25,276,"A. albopictus",45
+"Messa","4/15/2021",81,25,276,"A. aegypti",18
+"Messa","2/17/2021",81,24,20,"A. albopictus",17
+"Messa","2/17/2021",81,24,20,"A. aegypti",4
+"Messa","5/12/2021",81,23,291,"A. albopictus",92
+"Messa","5/12/2021",81,23,291,"A. aegypti",61
+"Messa","7/28/2021",81,22,353,"A. albopictus",37
+"Messa","7/28/2021",81,22,353,"A. aegypti",33
+"Mendong","4/15/2021",85,31,276,"A. albopictus",76
+"Mendong","4/15/2021",85,31,276,"A. aegypti",0
+"Mendong","1/19/2021",85,30,53,"A. albopictus",84
+"Mendong","1/19/2021",85,30,53,"A. aegypti",0
+"Mendong","1/27/2021",85,29,53,"A. albopictus",153
+"Mendong","1/27/2021",85,29,53,"A. aegypti",0
+"Mendong","4/19/2021",85,28,276,"A. albopictus",58
+"Mendong","4/19/2021",85,28,276,"A. aegypti",0
+"Mendong","5/14/2021",85,26,291,"A. albopictus",108
+"Mendong","5/14/2021",85,26,291,"A. aegypti",0
+"Mendong","6/15/2021",85,26,474,"A. albopictus",0
+"Mendong","6/15/2021",85,26,474,"A. aegypti",0
+"Mendong","7/26/2021",85,26,353,"A. albopictus",62
+"Mendong","7/26/2021",85,26,353,"A. aegypti",0
+"Mendong","9/17/2020",85,26,152,"A. albopictus",9
+"Mendong","9/17/2020",85,26,152,"A. aegypti",0
+"Mendong","7/29/2021",85,25,353,"A. albopictus",11
+"Mendong","7/29/2021",85,25,353,"A. aegypti",0
+"Mendong","11/11/2020",85,22,455,"A. albopictus",186
+"Mendong","11/11/2020",85,22,455,"A. aegypti",0
+"Mendong","12/11/2020",85,22,191,"A. albopictus",169
+"Mendong","12/11/2020",85,22,191,"A. aegypti",0
+"Essos","2/15/2021",98,30,20,"A. albopictus",18
+"Essos","2/15/2021",98,30,20,"A. aegypti",0
+"Essos","1/25/2021",98,30,53,"A. albopictus",37
+"Essos","1/25/2021",98,30,53,"A. aegypti",0
+"Essos","2/1/2021",98,30,20,"A. albopictus",105
+"Essos","2/1/2021",98,30,20,"A. aegypti",3
+"Essos","6/9/2021",98,28.5,474,"A. albopictus",147
+"Essos","6/9/2021",98,28.5,474,"A. aegypti",0
+"Essos","5/11/2021",98,28,291,"A. albopictus",71
+"Essos","5/11/2021",98,28,291,"A. aegypti",0
+"Essos","11/15/2020",98,28,455,"A. albopictus",20
+"Essos","11/15/2020",98,28,455,"A. aegypti",0
+"Essos","4/13/2021",98,27,276,"A. albopictus",174
+"Essos","4/13/2021",98,27,276,"A. aegypti",0
+"Essos","11/17/2020",98,27,455,"A. albopictus",82
+"Essos","11/17/2020",98,27,455,"A. aegypti",0
+"Essos","9/11/2020",98,26,152,"A. albopictus",19
+"Essos","9/11/2020",98,26,152,"A. aegypti",0
+"Essos","7/23/2021",98,25,353,"A. albopictus",74
+"Essos","7/23/2021",98,25,353,"A. aegypti",6
+"Essos","12/15/2020",98,25,191,"A. albopictus",143
+"Essos","12/15/2020",98,25,191,"A. aegypti",0
+"Afanayoa II","4/19/2021",2,27,276,"A. albopictus",8
+"Afanayoa II","4/19/2021",2,27,276,"A. aegypti",0
+"Afanayoa II","6/14/2021",2,26.5,474,"A. albopictus",8
+"Afanayoa II","6/14/2021",2,26.5,474,"A. aegypti",0
+"Afanayoa II","5/17/2021",2,25,291,"A. albopictus",16
+"Afanayoa II","5/17/2021",2,25,291,"A. aegypti",1
+"Afanayoa II","1/20/2021",2,24,53,"A. albopictus",5
+"Afanayoa II","1/20/2021",2,24,53,"A. aegypti",7
+"Afanayoa II","7/30/2021",2,24,353,"A. albopictus",1
+"Afanayoa II","7/30/2021",2,24,353,"A. aegypti",0
+"Afanayoa II","11/13/2020",2,22,455,"A. albopictus",13
+"Afanayoa II","11/13/2020",2,22,455,"A. aegypti",0
+"Afanayoa I","4/17/2021",0,27,276,"A. albopictus",76
+"Afanayoa I","4/17/2021",0,27,276,"A. aegypti",0
+"Afanayoa I","6/12/2021",0,26.5,474,"A. albopictus",44
+"Afanayoa I","6/12/2021",0,26.5,474,"A. aegypti",0
+"Afanayoa I","5/15/2021",0,26,291,"A. albopictus",31
+"Afanayoa I","5/15/2021",0,26,291,"A. aegypti",0
+"Afanayoa I","1/19/2021",0,24,53,"A. albopictus",69
+"Afanayoa I","1/19/2021",0,24,53,"A. aegypti",0
+"Afanayoa I","7/24/2021",0,22,353,"A. albopictus",10
+"Afanayoa I","7/24/2021",0,22,353,"A. aegypti",0
+"Afanayoa I","11/14/2020",0,30,455,"A. albopictus",35
+"Afanayoa I","11/14/2020",0,30,455,"A. aegypti",0

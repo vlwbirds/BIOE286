@@ -1,0 +1,127 @@
+BoxNumber,Position,SealID,CollectionDate,Status,TOPPID,Sex,Age,BodyMass,BiopsySide,Timepoint,MbAnalysisDate,MeanMb,SDMb,NicoleNotes
+1,A8,G967,2022-05-02,Sample ran successfully,2022211,F,2,170.4,R,Deployment,2024-06-25,98.42,4.92,Nice viable sample; some leftover 
+1,B1,G240,2022-05-04,Sample ran successfully,2022213,F,2,159.6,R,Deployment,2024-06-25,95.57,4.99,Nice viable sample; used all
+1,B2,H719,2022-05-05,Sample ran successfully,2022214,M,1,125,R,Deployment,2024-06-25,70.52,1.81,Nice viable sample; some leftover 
+1,B4,H891,2022-05-07,Sample ran successfully,2022216,F,1,95.4,R,Deployment,2024-06-27,82.25,3.25,Very nice muscle sample; about half saved 
+1,B6,H311,2022-05-09,Sample ran successfully,2022218,M,2,229.4,L,Deployment,2024-06-27,64.32,1.95,"Viable muscle; may have used it all, but saved what was left in vial (might just be blood and fat) anyways"
+1,B7,H664,2022-05-10,Sample ran successfully,2022219,F,1,128,L,Deployment,2024-06-27,63.34,4.43,"I didn't think there was enough tissue, but tried anyways with 0.018g and it seemed to have worked!"
+1,C1,H840,2022-05-13,Sample ran successfully,2022222,M,1,131.8,L,Deployment,2024-06-27,59.71,4.1,Used most of what was available (3 tiny pieces); saved what might have been one more tiny bit in vial
+1,C2,G686,2022-05-14,Sample ran successfully,2022223,F,3,206,L,Deployment,2024-06-27,94.21,4.43,Nice big sample; saved extra :) 
+1,C3,G634,2022-05-15,Sample ran successfully,2022224,F,3,250.6,L,Deployment,2024-06-27,86.32,2.88,Nice big sample; saved extra :) 
+1,C5,J107,2022-05-17,Sample ran successfully,2022226,M,1,142.6,R,Deployment,2024-06-27,73.88,1.32,Used all of muscle
+1,D2,G131,2022-05-26,Sample ran successfully,2022232,M,3,217,L,Deployment,2024-06-25,81.91,1.99,Viable sample; some leftover
+1,F1,H891,2022-08-27,Sample ran successfully,2022216,F,1,162.4,L,Recovery,2024-06-25,79.13,2.89,Viable sample; used all
+1,F6,G340,2022-10-07,Sample ran successfully,2022217,M,2,NA,R,Recovery,2024-07-09,52.78,2.16,Nice sample. Extra saved with some blubber
+1,G3,H311,2022-10-27,Sample ran successfully,2022218,M,2,340,R,Recovery,2024-06-25,49.26,0.75,Viable sample; used all
+1,G4,G131,2022-10-30,Sample ran successfully,2022232,M,3,365,R,Recovery,2024-06-27,76.43,2.49,Nice sample; Saved extra
+1,G5,H047,2022-11-03,Sample ran successfully,2022215,M,2,317,L,Recovery,2024-07-09,50.15,1.1,Good looking sample; some saved
+1,G6,H840,2022-11-07,Sample ran successfully,2022222,M,1,168,R,Recovery,2024-07-09,72.96,8.04,"Viable sample, but had to use all"
+1,G7,H529,2022-12-06,Sample ran successfully,2022228,F,1,NA,R,Recovery,2024-07-09,51.87,1.34,Nice sample; all used
+1,G9,D732,2023-01-22,Sample ran successfully,2022230,F,3,373,L,Recovery,2024-07-09,87.39,3.72,Nice big sample; extra saved
+1,H2,G967,2023-04-09,Sample ran successfully,2022211,F,2,344,L,Recovery,2024-06-25,88.66,4.91,"Vial was mislabeld as E967, but had this date on it (rather than the date for E967 in row above), and was in this spot; Viable sample used all"
+2,A2,K960,2023-04-22,Sample ran successfully,2023203,F,0,86,R,Deployment,2024-07-09,32.89,0.78,"Viable sample with fat; used all, tossed fat"
+2,A3,L037,2023-04-26,Sample ran successfully,2023207,F,0,96.5,L,Deployment,2024-07-10,40.83,1.58,Extra sample saved
+2,A4,K335,2023-04-27,Sample ran successfully,2023208,M,2,195,R,Deployment,2024-07-09,50.6,0.47,Viable sample; extra saved
+2,A5,J109,2023-04-28,Sample ran successfully,2023209,F,2,196.5,R,Deployment,2024-07-09,83.1,4.93,Nice big sample; extra saved
+2,A6,K147,2023-04-29,Sample ran successfully,2023210,F,2,160,R,Deployment,2024-07-09,61.2,0.72,Nice sample; extra saved
+2,A8,J136,2023-05-02,Sample ran successfully,2023213,M,2,240.5,R,Deployment,2024-07-09,54.26,3.22,Viable sample; extra saved
+2,A9,J003,2023-05-03,Sample ran successfully,2023214,F,2,196.5,R,Deployment,2024-07-09,95.31,2.32,Viable sample; extra saved
+2,B1,H795,2023-05-04,Sample ran successfully,2023215,M,2,210.5,L,Deployment,2024-07-10,80.7,5.88,"Great sample, a lot saved"
+2,B2,J187,2023-05-05,Sample ran successfully,2023216,F,1,126,L,Deployment,2024-07-10,86.57,2.81,Tiny bit saved
+2,B3,H712,2023-05-06,Sample ran successfully,2023217,M,2,194.5,R,Deployment,2024-07-10,96.83,6.59,Extra saved
+2,B4,J284,2023-05-07,Sample ran successfully,2023218,M,1,132.5,L,Deployment,2024-07-10,89.82,6.23,Extra saved
+2,B5,K804,2023-05-08,Sample ran successfully,2023219,F,1,103.5,R,Deployment,2024-07-10,92.56,7,Extra Saved
+2,B6,G042,2023-05-09,Sample ran successfully,2022225,M,3,485,R,Deployment,2024-07-10,68.3,2.39,Tiny bit saved
+2,B7,K696,2023-05-10,Sample ran successfully,2023220,F,1,118,L,Deployment,2024-07-10,77.79,1.3,Tiny bit saved
+2,B8,J410,2023-05-11,Sample ran successfully,2023221,M,1,98,L,Deployment,2024-07-10,57.21,1.57,Used all
+2,C1,J277,2023-05-13,Sample ran successfully,2023223,M,1,86,R,Deployment,2024-07-11,63.33,2.53,Extra saved
+2,C2,G960,2023-05-14,Sample ran successfully,2023224,F,3,223.5,L,Deployment,2024-07-11,98.66,1.81,Used all
+2,C3,J256,2023-05-15,Sample ran successfully,2023225,F,1,117,R,Deployment,2024-07-11,99.28,7.59,Extra saved
+2,C4,G375,2023-05-17,Sample ran successfully,2023226,F,3,238.5,L,Deployment,2024-07-11,92.93,0.05,"Saved a tiny bit of sample, but not enough to reanalyze; CV was initially 11% with one inconsistent replicate and two nearly identical replicates, so took average of two replicates that agreed and this decreased CV to 0.05%; believe this is useable."
+2,C5,G315,2023-05-18,Sample ran successfully,2023227,F,3,282.5,L,Deployment,2024-07-11,83.39,0.85,Extra saved
+2,C6,H391,2023-05-22,Sample ran successfully,2023228,F,3,263.5,R,Deployment,2024-07-09,85.42,1.36,Viable sample; used all
+2,C7,H049,2023-05-23,Sample ran successfully,2023229,M,3,279,R,Deployment,2024-07-11,71.34,2.88,"This sample was origionally run on 7/9, but had a CV greater than 10%; Reanalyzed succesfully using remaining tissue on 7/11"
+2,C8,G454,2023-05-25,Sample ran successfully,None,M,3,304,R,Deceased,2024-07-09,93.43,4.08,Viable sample; extra saved
+2,C9,G244,2023-06-06,Sample ran successfully,2023230,M,3,365.5,L,Deployment,2024-07-09,84.84,2.7,Viable sample; extra saved
+2,D1,H244,2023-06-07,Sample ran successfully,2023231,M,3,226,R,Deployment,2024-07-09,99.36,1.81,Viable sample; extra saved
+2,F1,J284,2023-08-13,Sample ran successfully,2023218,M,1,214.4,R,Recovery,2024-07-10,57.82,1.07,"Tiny bit saved. **In database this is labeled J284, but on the vial it was labeled J248 ... "
+2,F2,H484,2023-09-16,Sample ran successfully,2023222,M,1,168.8,L,Recovery,2024-07-10,67.13,0.55,Used all
+2,F4,J016,2023-09-25,Sample ran successfully,2023211,F,2,286.8,R,Recovery,2024-07-10,80.86,1.26,
+2,F6,J278,2023-08-28,Sample ran successfully,2023219,F,1,164,L,Recovery,2024-07-10,68.99,2,Used all 
+2,F7,H712,2023-10-01,Sample ran successfully,2023217,M,2,299,L,Recovery,2024-07-10,60.63,1.57,Extra saved
+2,F8,K696,2023-10-08,Sample ran successfully,2023220,F,1,NA,R,Recovery,2024-07-10,61.37,1.59,Extra saved
+2,F9,J085,2023-10-08,Sample ran successfully,2023210,F,2,NA,L,Recovery,2024-07-10,98.26,1.46,"Great sample, a lot saved"
+2,G1,K335,2023-10-08,Sample ran successfully,2023208,M,2,NA,L,Recovery,2024-07-10,75.65,2.14,Extra saved
+2,G2,H795,2023-10-10,Sample ran successfully,2023215,M,2,312.6,R,Recovery,2024-07-10,73.71,1.58,Extra saved
+2,G3,J136,2023-10-10,Sample ran successfully,2023213,M,2,329.6,L,Recovery,2024-07-11,87.38,4.86,Extra saved
+2,G4,J003,2023-10-19,Sample ran successfully,2023214,F,2,320,L,Recovery,2024-07-11,91.01,4.1,Tiny bit saved 
+2,G5,J256,2023-10-19,Sample ran successfully,2023225,F,1,182.6,R,Recovery,2024-07-11,86.26,1.76,Extra saved
+2,G6,J109,2023-10-20,Sample ran successfully,2023209,F,2,294.5,L,Recovery,2024-07-11,83.34,2.28,Extra saved
+2,G8,J724,2023-12-05,Sample ran successfully,2023204,F,0,84,R,Recovery,2024-07-11,50,2.43,Extra saved
+2,H2,H391,2024-01-29,Sample ran successfully,2023228,F,3,424.5,L,Recovery,2024-07-11,NA,NA,Used all of this sample; following sonication a fat film issue was noted; Data point not trustworthy 
+3,A1,L472,2024-04-20,Sample ran successfully,2024202,F,0,69.4,L,Deployment,2024-07-16,45.47,2.43,Extra saved
+3,A4,L489,2024-04-22,Sample ran successfully,2024205,F,0,56.6,L,Deployment,2024-07-18,49.79,2.26,Extra saved 
+3,A6,L651,2024-04-24,Sample ran successfully,2024207,F,0,79.4,R,Deployment,2024-07-18,57.37,2.81,Extra saved
+3,A8,K311,2024-04-30,Sample ran successfully,2024210,F,3,272,L,Deployment,2024-07-18,81.38,3.87,Extra saved
+3,A9,J414,2024-05-01,Sample ran successfully,2024211,F,2,159.3,R,Deployment,2024-07-18,75.86,7.23,Extra saved
+3,B1,J428,2024-05-02,Sample ran successfully,2024212,M,2,174.6,R,Deployment,2024-07-16,100.73,1.01,Extra saved
+3,B3,K906,2024-05-05,Sample ran successfully,2024214,M,2,185,R,Deployment,2024-07-16,70.78,1.86,Extra saved
+3,B4,J021,2024-05-07,Sample ran successfully,2024215,F,3,262,R,Deployment,2024-07-16,88.6,0.34,Extra saved
+3,B6,J612,2024-05-09,Sample ran successfully,2024217,F,1,118,L,Deployment,2024-07-16,86.3,2.66,Extra saved
+3,B7,H099,2024-05-10,Sample ran successfully,2024218,F,2,180.4,R,Deployment,2024-07-16,103.46,4.06,I ran this sample twice because it was a high value and we had a lot of extrao work with; both runs agreed with one another; used value from the run with the lowet CV; extra saved
+3,B8,H640,2024-05-11,Sample ran successfully,2024219,F,3,299.8,L,Deployment,2024-07-16,96.65,2.2,Extra saved
+3,B9,J731,2024-05-11,Sample ran successfully,2024220,F,1,92.4,R,Deployment,2024-07-16,84.53,3.01,Extra saved
+3,C1,J900,2024-05-11,Sample ran successfully,2024221,F,1,116.8,L,Deployment,2024-07-16,77.74,1.96,Extra saved
+3,C2,J465,2024-05-14,Sample ran successfully,2024222,F,2,186.5,R,Deployment,2024-07-16,76.24,1.25,Extra saved
+3,C3,J099,2024-05-16,Sample ran successfully,2024223,M,3,273,L,Deployment,2024-07-18,98.78,4.73,Extra Saved
+3,C4,J544,2024-05-17,Sample ran successfully,2024224,M,2,195,R,Deployment,2024-07-18,95.95,4.64,Extra saved
+3,C5,J145,2024-05-18,Sample ran successfully,2024225,M,3,312,L,Deployment,2024-07-18,105.99,1.96,Extra saved
+3,C7,J757,2024-05-23,Sample ran successfully,2024227,M,1,134.5,R,Deployment,2024-07-18,82.73,7.2,Used all 
+3,C9,J759,2024-05-26,Sample ran successfully,2024229,M,1,113.5,R,Deployment,2024-07-18,88.01,3.74,Extra saved
+3,D1,L203,2024-05-26,Sample ran successfully,2024230,M,1,112.5,R,Deployment,2024-07-18,74.18,1.28,Extra saved
+1,A4,J275,2022-04-23,Tried to run but not successful,2022206,F,0,67.6,R,Deployment,2024-06-25,NA,NA,Viable sample; used all; FAT issue with sample - did not run successfully 
+1,A6,J416,2022-04-27,Tried to run but not successful,2022208,F,0,105.4,R,Deployment,2024-06-25,NA,NA,"Not sure how good this sample is, tissue kind of falling apart, but tried running anyways; FAT issue with sample - did not run successfully "
+1,A9,E820,2022-05-03,Tried to run but not successful,2022212,F,2,162.6,L,Deployment,2024-06-25,NA,NA,"Only ~0.01g muscle, but trying anyways; Not enough sample, did not run successfully "
+1,C4,G042,2022-05-16,Tried to run but not successful,2022225,M,3,273.6,L,Deployment,2024-06-27,NA,NA,"Noted as questionable when sampling, but still tried to use what was there; did not run successfully "
+1,C9,D732,2022-05-23,Tried to run but not successful,2022230,F,3,253,L,Deployment,2024-06-25,NA,NA,Viable sample; used all; FAT issue with sample - did not run successfully 
+1,F3,H664,2022-09-22,Tried to run but not successful,2022219,F,1,196.8,R,Recovery,2024-06-25,NA,NA,"Only ~0.01g muscle, but trying anyways; also maybe had CT after mincing; Not enough sample, did not run successfully "
+1,F5,H719,2022-10-04,Tried to run but not successful,2022214,M,1,203.8,L,Recovery,2024-06-27,NA,NA,"noted as questionable when sampling; used what tissue I could find, but had fat film issue after spinning; Did not run successfully;"
+1,G1,H835,2022-10-23,Tried to run but not successful,2022221,M,1,186.5,L,Recovery,2024-06-25,NA,NA,Used material that was there; might have had CT or tiny bits of fat; FAT issue with sample - did not run successfully 
+1,G2,G136,2022-10-24,Tried to run but not successful,2022231,M,3,458.5,R,Recovery,2024-06-25,NA,NA,"Only ~0.01g muscle, but trying anyways; Not enough sample, did not run successfully "
+1,G8,G634,2023-01-21,Tried to run but not successful,2022224,F,3,378.5,R,Recovery,2024-07-09,NA,NA,"Ran sample, but CV greater than 10%; Noted that there was a lot of little fat bits in this sample that I tried to remove; had to use all of what was there. Must not have gotten it all out or wasn't a viable sample as I was hoping"
+2,B9,H484,2023-05-12,Tried to run but not successful,2023222,M,1,105.5,R,Deployment,2024-07-10,NA,NA,CV was 37%; not sure what went wrong; used all of sample so can't rerun 
+2,G7,G461,2023-11-29,Tried to run but not successful,2023232,M,3,416,R,Recovery,2024-07-11,NA,NA,Ran twice. CV was initually 22% in first rounf with an inconsistent replicate; Second time ran with barely enough sample and came out super low; not successful with this sample
+3,A7,L649,2024-04-27,Tried to run but not successful,2024208,M,0,90.2,L,Deployment,2024-07-18,NA,NA,"Attempted to run, had to use everything available, but then ended up with a fat film issue after centrifuge, sample was ruined"
+1,A1,H948,2022-04-11,Not enough muscle to run analysis,2022201,F,0,78.4,R,Deployment,2024-06-25,NA,NA,"No sample; all blood and blubber, blubber saved"
+1,A2,J477,2022-04-13,Not enough muscle to run analysis,2022202,M,0,116.4,L,Deployment,2024-06-25,NA,NA,No viable sample (<0.001g); mostly blood
+1,A3,J484,2022-04-18,Not enough muscle to run analysis,2022204,F,0,78.6,R,Deployment,2024-06-25,NA,NA,No sample; all blood and tiny bits of fat; nothing saved
+1,A5,J450,2022-04-26,Not enough muscle to run analysis,2022207,M,0,69.6,R,Deployment,2024-06-25,NA,NA,"No sample; all blood and blubber, blubber saved"
+1,A7,H875,2022-04-29,Not enough muscle to run analysis,2022209,F,1,126.2,L,Deployment,2024-06-25,NA,NA,No viable sample (<0.001g); mostly blood
+1,B3,H047,2022-05-06,Not enough muscle to run analysis,2022215,M,2,217.4,R,Deployment,2024-06-27,NA,NA,<0.005g tissue to work with. Could not do analysis but saved that tiny bit with the blubber that was also in the vial
+1,B5,G340,2022-05-08,Not enough muscle to run analysis,2022217,M,2,176.4,L,Deployment,2024-06-27,NA,NA,No sample; all blood and fat; nothing saved
+1,B8,H393,2022-05-11,Not enough muscle to run analysis,2022220,M,2,178.4,L,Deployment,2024-06-27,NA,NA,Just long blubber strand; saved
+1,B9,H835,2022-05-12,Not enough muscle to run analysis,2022221,M,1,118.4,R,Deployment,2024-06-27,NA,NA,Mostly blood with a tiny bit of fat and <0.01g muscle; did not save
+1,C6,E967,2022-05-18,Not enough muscle to run analysis,2022227,F,3,255,L,Deployment,2024-06-27,NA,NA,No viable sample (<0.001g); mostly blood
+1,C7,E529,2022-05-19,Not enough muscle to run analysis,2022228,F,1,115.8,L,Deployment,2024-06-27,NA,NA,"Just blood, fur, and fat; not saved"
+1,C8,E749,2022-05-21,Not enough muscle to run analysis,2022229,M,3,313,R,Deployment,2024-06-27,NA,NA,<0.01g tissue; could not use for analysis but did save
+1,D1,G136,2022-05-25,Not enough muscle to run analysis,2022231,M,3,302.2,L,Deployment,2024-06-25,NA,NA,
+1,F2,G240,2022-09-13,Not enough muscle to run analysis,2022213,F,2,235.8,L,Recovery,2024-06-25,NA,NA,No sample; all blood and tiny bits of fat; nothing saved
+1,F4,H875,2022-10-02,Not enough muscle to run analysis,2022209,F,1,197.6,R,Recovery,2024-06-27,NA,NA,Only fat and blood; did not save
+1,F7,H393,2022-10-13,Not enough muscle to run analysis,2022220,M,2,272,R,Recovery,2024-07-09,NA,NA,No sample; all blood and tiny bits of fat; nothing saved
+1,F8,E820,2022-10-13,Not enough muscle to run analysis,2022212,F,2,253.6,R,Recovery,2024-07-09,NA,NA,No sample; all blood and tiny bits of fat; nothing saved
+1,F9,G465,2022-10-23,Not enough muscle to run analysis,2022210,F,2,261.5,R,Recovery,2024-07-09,NA,NA,No sample; all fat; not saved
+1,H1,E967,2023-01-26,Not enough muscle to run analysis,2022227,F,3,380,R,Recovery,2024-06-25,NA,NA,No viable sample; all blood clot and fat; 
+2,A1,K958,2023-04-21,Not enough muscle to run analysis,2023202,M,0,95,R,Deployment,2024-07-09,NA,NA,"No sample, just blood and fat bits; not saved"
+2,A7,J339,2023-05-01,Not enough muscle to run analysis,2023212,F,0,76.5,L,Deployment,2024-07-10,NA,NA,Not enough sample (0.08g); saved
+2,D2,G461,2023-06-08,Not enough muscle to run analysis,2023232,M,3,254.5,L,Deployment,2024-07-09,NA,NA,<0.01g sample; not saved
+2,F5,H244,2023-09-25,Not enough muscle to run analysis,2023231,M,3,324.6,L,Recovery,2024-07-10,NA,NA,No useable muscle in vial 
+2,G9,G315,2024-01-09,Not enough muscle to run analysis,2023227,F,3,438,L,Recovery,2024-07-11,NA,NA,Nothing useable in vial 
+3,A2,L625,2024-04-20,Not enough muscle to run analysis,2024203,M,0,87.6,L,Deployment,2024-07-16,NA,NA,"Not enough (0.008g), but saved"
+3,A3,L479,2024-04-21,Not enough muscle to run analysis,2024204,M,0,97,R,Deployment,2024-07-16,NA,NA,"Only blood and fat, nothing to save"
+3,A5,K634,2024-04-23,Not enough muscle to run analysis,2024206,F,0,77.4,R,Deployment,2024-07-18,NA,NA,"Only blood and fat, nothing to save"
+3,B2,J427,2024-05-05,Not enough muscle to run analysis,2024213,F,2,186.4,R,Deployment,2024-07-16,NA,NA,"Not enough (0.011g), but saved"
+3,B5,K381,2024-05-08,Not enough muscle to run analysis,2024216,F,3,269,R,Deployment,2024-07-16,NA,NA,"Just fat and blood, nothing to save"
+3,C6,J182,2024-05-19,Not enough muscle to run analysis,2024226,M,2,162.5,R,Deployment,2024-07-18,NA,NA,"Only blood, nothing to save"
+3,C8,K127,2024-05-24,Not enough muscle to run analysis,2024228,M,3,309.6,R,Deployment,2024-07-18,NA,NA,"Not enough sample to run (0.014g), but saved what was there"
+2,F3,J277,2023-09-14,Ran OK but see notes and consider removing,2023223,M,1,146.4,L,Recovery,2024-07-10,55.23,2.18,"Was not sure if this sample would run as I only had 0.016g to work with; CV was initially 13% with one inconsistent replicate, so took average of two replicates that agreed and this decreased CV to 3%; I might be inclined to drop this, but up to RB if she wants to include. "
+2,H1,G960,2024-01-13,Ran OK but see notes and consider removing,2023224,F,3,380.5,R,Recovery,2024-07-11,55.84,1.35,"Was not sure if this sample would run as I only had 0.018g of tissue to work with; May have run ok (low CV) but value seems very low. I'm incluned to drop this, but up to RB if she wants to include. "
