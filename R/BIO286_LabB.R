@@ -221,3 +221,91 @@ p3nums = ggplot_build(p3)
 head(p3nums$data[[1]])
 
 # 3) Try out data manipulation and plotting on your own!
+
+
+# 1. Load the tidyverse packages from the library and read in the .csv file called “animal_weight.csv”. Store it in as a data object called animal_weights.
+## Call to tidyverse packages
+library(tidyverse)
+urlRemote = "https://raw.githubusercontent.com/"
+pathGithub = "calvin-munson/R-DataScience-workshops/master/practice_worksheets/animal_weights/"
+fileName = "animal_weight.csv"
+animal_weights=read.csv(paste0(urlRemote, pathGithub, fileName))
+
+# 2. Write code to: a) Look at the header of the data, b) find the number of columns in the
+# data, and c) find the number of rows in the data.
+head(animal_weights) # species sex age_class individual weight_kg height_m
+ncol(animal_weights) # 6 cols
+nrow(animal_weights) # 24 rows
+
+# 3. Identify the unique species and unique age classes present in the dataset
+unique(animal_weights$species) # "Elephant" "Hippo"    "Rhino"   
+unique(animal_weights$age_class) # [1] "Child" "Adult"
+
+# 4. Write code to calculate the mean weight of each species in the dataset. Hint: group_by()
+# and summarise() are your friends
+
+spp_mean_weight <- animal_weights %>% 
+  group_by(species) %>% 
+  summarise(mean(weight_kg))
+# species  `mean(weight_kg)`
+# <chr>                <dbl>
+# 1 Elephant             7875 
+# 2 Hippo                1888.
+# 3 Rhino                1781.
+
+# 5. Calculate the same average weight, but this time for each species/age class combination
+# in the dataset (for instance, what does the average elephant child weight? Elephant adult?
+#                   Hippo child? etc)
+
+spp_class_kg <- animal_weights %>% 
+  group_by(species, age_class) %>% 
+  summarise(mean(weight_kg))
+# species  age_class `mean(weight_kg)`
+# <chr>    <chr>                 <dbl>
+# 1 Elephant Adult                 9125 
+# 2 Elephant Child                 6625 
+# 3 Hippo    Adult                 2300 
+# 4 Hippo    Child                 1475 
+# 5 Rhino    Adult                 2225 
+# 6 Rhino    Child                 1338.
+
+# 6. Next, calculate both mean weight AND mean height in the same data frame for each
+# species/age class combination
+
+spp_class_kg_ht <- animal_weights %>% 
+  group_by(species, age_class) %>% 
+  summarise(mean(weight_kg),mean(height_m))
+# species  age_class `mean(weight_kg)` `mean(height_m)`
+# <chr>    <chr>                 <dbl>            <dbl>
+# 1 Elephant Adult                 9125              6.6 
+# 2 Elephant Child                 6625              3.5 
+# 3 Hippo    Adult                 2300              1.48
+# 4 Hippo    Child                 1475              0.9 
+# 5 Rhino    Adult                 2225              1.62
+# 6 Rhino    Child                 1338.             1.12
+
+# 7. You may have noticed that there is also a column for the sex of the animal, but that the
+# data only exists for the Hippos in our dataset. Create a new dataframe called hippo_stats,
+# which a) only includes data from Hippos, and b) has the mean weight and height for each
+# species, sex, and age combination in the dataset.
+
+
+# 8. Calculate Body Mass Index (BMI) for each individual animal. In humans, BMI is calculated
+# as:
+#   BMI = kg/m2
+# Where BMI is body mass index, kg is mass in kilograms, and m is height in meters.
+# Taking the original dataframe, create a new column that contains a calculated BMI for each individual
+# animal (this is obviously totally meaningless in terms of actual data on these species!)
+# Hint: mutate() is your friend! Also, if you are stuck on how to square a value in R, check out our even better
+# friend, Google!
+#   9. Using ggplot, create a set of boxplots showing the distribution of weights for each species
+# Hint: Think about what value you want on which axis
+# 10. Create a more detailed boxplot, this time including the fill of the boxplot as the age class
+# of the species Additionally, change a few of the features of the plot:
+#   a) Add neat x and y axis labels
+# b) Add a plot title
+# c) Change the y-axis limits to include 0 as a minimum
+# d) Jitter the raw data points on top
+# Hint: Again, use Google if you’re stuck on how to change these features. The website Stack Overflow is a
+# great place to go.
+# 27
