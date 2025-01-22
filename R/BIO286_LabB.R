@@ -152,3 +152,72 @@ out=dat %>%
   summarize(mean=mean(Birth_Rt),
             sd=sd(Birth_Rt))
 out
+
+#make a bar graph with error bars
+ggplot(data=out, aes(x=Urban.1, y=mean)) +
+  geom_bar(stat="identity", position=position_dodge()) +
+  geom_jitter(data=dat,aes(x=Urban.1,y=Birth_Rt),width=0.2)+
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=.2)+
+  labs(x="community type",y="mean birth rate (+/- SD)")
+
+#first calculate the sample size of each group
+out=dat %>%
+  group_by(Urban.1) %>%
+  summarize(mean=mean(Birth_Rt),
+            sd=sd(Birth_Rt),
+            n=n(),
+            se=sd/sqrt(n))
+out
+
+#make a bar graph with error bars
+ggplot(data=out, aes(x=Urban.1, y=mean)) +
+  geom_bar(stat="identity", position=position_dodge()) +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.2)+
+  geom_jitter(data=dat,aes(x=Urban.1,y=Birth_Rt),width=0.2)+
+  labs(y=expression("Mean Birth Rate" %+-% "SE"))
+
+ggplot(data=dat,aes(x=Urban.1,y=Birth_Rt,fill=Group))+
+  geom_boxplot()+
+  geom_point(aes(col=Group),position=position_jitterdodge(jitter.width = .2)) +
+  labs(x="Urban characteristics",
+     y="Birth Rate",
+     col="Country Group",
+     fill="Country Group")
+
+p1=ggplot(data=dat,aes(x=Group,y=Birth_Rt,fill=Urban.1))+
+  geom_boxplot()+
+  geom_point(aes(col=Urban.1),position=position_jitterdodge(jitter.width=.2))+
+  labs(x="Country Group",y="Birth Rate",
+       col="Urban Characteristics",
+       fill="Urban Characteristics")
+p1
+
+p2=ggplot(data=dat,aes(x=Gdp_Cap))+
+  geom_histogram(binwidth=2000,col="black")+
+  stat_bin(binwidth=2000, geom="text", aes(label=after_stat(count)), vjust=-1.5)+
+  ylim(0,20)
+p2
+
+library(patchwork)
+p1+p2
+
+ggplot(dat, aes(x=Urban.1, y=Birth_Rt,fill=Urban.1))+
+  geom_boxplot()+geom_jitter()+facet_wrap(.~Group)+
+  theme(legend.position="none")
+
+p2nums = ggplot_build(p2)
+head(p2nums$data[[1]])
+
+subset(dat,Gdp_Cap>-1000&Gdp_Cap<1000)
+
+dat %>% filter(Gdp_Cap>-1000&Gdp_Cap<1000)
+
+p3=ggplot(data=dat,aes(x=Gdp_Cap))+
+  geom_histogram(aes(y = after_stat(count/sum(count))), binwidth=2000,col="black")+
+  labs(y="Frequency")+scale_y_continuous(labels = scales::percent)
+p3
+
+p3nums = ggplot_build(p3)
+head(p3nums$data[[1]])
+
+# 3) Try out data manipulation and plotting on your own!
