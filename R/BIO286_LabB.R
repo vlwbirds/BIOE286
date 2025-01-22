@@ -121,3 +121,11 @@ cereal %>%
             mean_calories = mean(calories))
 
 # G pivot_longer() & pivot_wider
+cereal_long = cereal %>%
+  pivot_longer(cols = c(-name, -mfr, -type),
+               names_to = "nutrient",
+               values_to = "value")
+head(cereal_long)
+
+# As a tiny exercise, try to write out in plain English what the chunk of code above does.
+# The code above takes the larger cereal df and pivots the names, mfr, and type into a single column for each and repeats the values for each other lines.
