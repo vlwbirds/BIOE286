@@ -129,3 +129,26 @@ head(cereal_long)
 
 # As a tiny exercise, try to write out in plain English what the chunk of code above does.
 # The code above takes the larger cereal df and pivots the names, mfr, and type into a single column for each and repeats the values for each other lines.
+
+#THis code takes the unique individual names form the nutrient column and makes a column for each one, then also takes the values that were previously associated with them on on a row, but now they are in the column with the name as a header
+cereal_wide = cereal_long %>%
+  pivot_wider(names_from = "nutrient",
+              values_from = "value")
+head(cereal_wide)
+
+# 2) Basic plotting
+
+rm(list=ls()) #fresh start!
+dat=read.csv(here("data/LabB/ourworld.csv"))
+
+colnames(dat)
+
+ggplot(data=dat,aes(x=Urban.1,y=Birth_Rt))+
+  geom_boxplot()+geom_jitter(width=0.2)+
+  labs(x="Urban characteristics",y="Birth Rate")
+
+out=dat %>%
+  group_by(Urban.1) %>%
+  summarize(mean=mean(Birth_Rt),
+            sd=sd(Birth_Rt))
+out
