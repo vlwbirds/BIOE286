@@ -257,6 +257,7 @@ spp_mean_weight <- animal_weights %>%
 # in the dataset (for instance, what does the average elephant child weight? Elephant adult?
 #                   Hippo child? etc)
 
+
 spp_class_kg <- animal_weights %>% 
   group_by(species, age_class) %>% 
   summarise(mean(weight_kg))
@@ -268,6 +269,7 @@ spp_class_kg <- animal_weights %>%
 # 4 Hippo    Child                 1475 
 # 5 Rhino    Adult                 2225 
 # 6 Rhino    Child                 1338.
+
 
 # 6. Next, calculate both mean weight AND mean height in the same data frame for each
 # species/age class combination
@@ -284,10 +286,25 @@ spp_class_kg_ht <- animal_weights %>%
 # 5 Rhino    Adult                 2225              1.62
 # 6 Rhino    Child                 1338.             1.12
 
+
 # 7. You may have noticed that there is also a column for the sex of the animal, but that the
 # data only exists for the Hippos in our dataset. Create a new dataframe called hippo_stats,
 # which a) only includes data from Hippos, and b) has the mean weight and height for each
 # species, sex, and age combination in the dataset.
+
+hippo_stats <- animal_weights %>% 
+  subset(species %in% "Hippo") %>% 
+  group_by(species, age_class, sex) %>% 
+  summarise(mean(weight_kg), mean(height_m))
+
+# # A tibble: 4 × 5
+# # Groups:   species, age_class [2]
+# species age_class sex    `mean(weight_kg)` `mean(height_m)`
+# <chr>   <chr>     <chr>              <dbl>            <dbl>
+# 1 Hippo   Adult     Female              1500             1.4 
+# 2 Hippo   Adult     Male                3100             1.55
+# 3 Hippo   Child     Female              1200             0.8 
+# 4 Hippo   Child     Male                1750             1  
 
 
 # 8. Calculate Body Mass Index (BMI) for each individual animal. In humans, BMI is calculated
