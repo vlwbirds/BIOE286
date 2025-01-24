@@ -337,13 +337,20 @@ bmi <- animal_weights %>%
 
 weight_plot <- ggplot(animal_weights, aes(x=species, y=weight_kg, fill = species)) +
   geom_boxplot() +
-  geom_point(aes(col=species, color = "black"),position=position_jitterdodge(jitter.width=.2))
+  geom_point(aes(col=species, color = "black"),position=position_jitterdodge(jitter.width=.2)) #atrocious without chaning the points to black
 
 # 10. Create a more detailed boxplot, this time including the fill of the boxplot as the age class
 # of the species Additionally, change a few of the features of the plot:
-#   a) Add neat x and y axis labels
+# a) Add neat x and y axis labels
 # b) Add a plot title
 # c) Change the y-axis limits to include 0 as a minimum
 # d) Jitter the raw data points on top
 # Hint: Again, use Google if you’re stuck on how to change these features. The website Stack Overflow is a
 # great place to go.
+
+age_plot <- ggplot(animal_weights, aes(age_class, weight_kg, fill = species)) +
+  geom_boxplot() +
+  geom_point(aes(col=species, color = "black"),position=position_jitterdodge(jitter.width=.2)) +
+  ylim(0,10000) +
+  labs(title = "Animal Weight by Species and Age Class", x = "Age Class", y = "Weight (kg)")
+age_plot
