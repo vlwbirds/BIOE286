@@ -315,8 +315,30 @@ hippo_stats <- animal_weights %>%
 # animal (this is obviously totally meaningless in terms of actual data on these species!)
 # Hint: mutate() is your friend! Also, if you are stuck on how to square a value in R, check out our even better
 # friend, Google!
+
+bmi <- animal_weights %>% 
+  mutate(BMI = weight_kg/height_m^2)
+
+# species    sex age_class individual weight_kg height_m       BMI
+# 1  Elephant            Child          A      8000      4.0  500.0000
+# 2  Elephant            Child          B      6000      3.0  666.6667
+# 3  Elephant            Adult          C     10000      7.0  204.0816
+# 4  Elephant            Adult          D      9000      6.5  213.0178
+# 5  Elephant            Child          E      7000      4.0  437.5000
+# 6  Elephant            Child          F      5500      3.0  611.1111
+# 7  Elephant            Adult          G      9000      6.4  219.7266
+# 8  Elephant            Adult          H      8500      6.5  201.1834
+# 9     Hippo Female     Adult          A      1400      1.4  714.2857
+# 10    Hippo Female     Adult          B      1600      1.4  816.3265
+# 11    Hippo   Male     Adult          C      3000      1.5 1333.3333
+
 #   9. Using ggplot, create a set of boxplots showing the distribution of weights for each species
 # Hint: Think about what value you want on which axis
+
+weight_plot <- ggplot(animal_weights, aes(x=species, y=weight_kg, fill = species)) +
+  geom_boxplot() +
+  geom_point(aes(col=species, color = "black"),position=position_jitterdodge(jitter.width=.2))
+
 # 10. Create a more detailed boxplot, this time including the fill of the boxplot as the age class
 # of the species Additionally, change a few of the features of the plot:
 #   a) Add neat x and y axis labels
@@ -325,4 +347,3 @@ hippo_stats <- animal_weights %>%
 # d) Jitter the raw data points on top
 # Hint: Again, use Google if you’re stuck on how to change these features. The website Stack Overflow is a
 # great place to go.
-# 27
