@@ -350,7 +350,7 @@ weight_plot <- ggplot(animal_weights, aes(x=species, y=weight_kg, fill = species
 
 age_plot <- ggplot(animal_weights, aes(age_class, weight_kg, fill = species)) +
   geom_boxplot() +
-  geom_point(aes(col=species, color = "black"),position=position_jitterdodge(jitter.width=.2)) +
+  geom_point(aes(col=species, color = "black"), position=position_jitterdodge(jitter.width=.2)) +
   ylim(0,10000) +
   labs(title = "Animal Weight by Species and Age Class", x = "Age Class", y = "Weight (kg)")
 age_plot
