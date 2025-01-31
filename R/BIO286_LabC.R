@@ -7,6 +7,7 @@
 library(here)
 library(tidyverse)
 library(ggpubr)
+library(lmtest)
 
 #############################################
 # 1) Optimizing sample size
@@ -170,3 +171,59 @@ fit=lm(ConfidenceBeg~Time,data=FakeData); summary(fit)
 ## Testing for normality ##
 par(mfrow=c(2,2)) #make a 2x2 matrix of plotsd
 plot(fit) #make 4 diagnostic plots
+
+#Normality of residuals:
+shapiro.test(resid(fit))
+
+# Shapiro-Wilk normality test
+# 
+# data:  resid(fit)
+# W = 0.99932, p-value = 0.9824
+
+#Linearity of the relationship:
+summary(lm(resid(fit)~poly(predict(fit),2)))
+
+# Call:
+#   lm(formula = resid(fit) ~ poly(predict(fit), 2))
+# 
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -16.4471  -3.3990  -0.0769   3.7820  18.0147 
+# 
+# Coefficients:
+#                          Estimate Std. Error t value Pr(>|t|)
+# (Intercept)            -4.463e-16  1.645e-01   0.000    1.000
+# poly(predict(fit), 2)1  3.529e-14  5.203e+00   0.000    1.000
+# poly(predict(fit), 2)2  4.561e+00  5.203e+00   0.877    0.381
+# 
+# Residual standard error: 5.203 on 997 degrees of freedom
+# Multiple R-squared:  0.0007702,	Adjusted R-squared:  -0.001234 
+# F-statistic: 0.3842 on 2 and 997 DF,  p-value: 0.6811
+#
+#This fits the residuals to a quadratic polynomial model.
+#If the 2nd term of the polynomial (the ,2) is significant,
+#there is non-linearity in the residuals
+
+#Homoscedasticity (constant variance):
+bptest(fit)
+
+# studentized Breusch-Pagan test
+# 
+# data:  fit
+# BP = 0.16709, df = 1, p-value = 0.6827
+#
+#P-values <0.05 indicate non-constant variance (heteroskedasticity)
+
+#Independence of residuals for temporal data
+#(i.e. data points taken on successive days/weeks/etc.);
+#your response variable needs to be sorted by date:
+pacf(resid(fit))
+
+#This makes a plot of the partial autocorrelation of the residuals,
+#which is the correlation between the residuals.
+#If the bars extend above or below the blue dashed lines,
+#this indicates significant correlation at that timestep.
+
+coef(fit)
+# (Intercept)        Time 
+# -0.4025621   1.5064325
