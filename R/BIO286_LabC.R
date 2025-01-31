@@ -217,13 +217,34 @@ bptest(fit)
 #Independence of residuals for temporal data
 #(i.e. data points taken on successive days/weeks/etc.);
 #your response variable needs to be sorted by date:
-pacf(resid(fit))
 
+pacf(resid(fit)) 
 #This makes a plot of the partial autocorrelation of the residuals,
 #which is the correlation between the residuals.
 #If the bars extend above or below the blue dashed lines,
 #this indicates significant correlation at that timestep.
 
-coef(fit)
+coef(fit) #gives intercept and slope
 # (Intercept)        Time 
 # -0.4025621   1.5064325
+
+coef(summary(fit)) # yay more data
+#               Estimate Std. Error    t value      Pr(>|t|)
+# (Intercept) -0.4025621 1.59708010 -0.2520613  8.010456e-01
+# Time         1.5064325 0.03180874 47.3590828 1.687125e-257
+
+coef(summary(fit))[2] # time slope
+coef(summary(fit))["Time","Estimate"] #same thing, more specific
+## [1] 1.506433
+
+
+
+############################################################
+############ 3) Stats annotations, fitted lines, and CIs
+############################################################
+
+# plot lm to FakeData
+ggplot(data=FakeData,aes(x=Time,y=ConfidenceBeg))+geom_point()+
+  geom_smooth(method="lm",colour="purple")+
+  stat_cor(label.y = c(100),color="purple")+
+  stat_regline_equation(label.y = c(105),color="purple")
