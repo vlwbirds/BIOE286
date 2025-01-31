@@ -19,6 +19,14 @@ dat <- read_csv(here("data/LabC/AbaloneSizes2.csv"))
 
 table(dat$SampleSize,dat$Group)
 
+#       a   b   c   d   e   f   g   h   i   j
+# 5     5   5   5   5   5   5   5   5   5   5
+# 10   10  10  10  10  10  10  10  10  10  10
+# 25   25  25  25  25  25  25  25  25  25  25
+# 50   50  50  50  50  50  50  50  50  50  50
+# 100 100 100 100 100 100 100 100 100 100 100
+# 500 500 500 500 500 500 500 500 500 500 500
+
 # fake data generation using rep()
 r=data.frame(colony=rep(c("Ano Nuevo","San Simeon","Farallones"),each=10),
              sex=(rep(c("Male","Female"),times=15)))
@@ -106,3 +114,59 @@ ggarrange(figalog,figblog,figclog,figdlog,
           nrow=2,ncol=2,
           labels=c("A","B","C","D"))
 
+# At what sample size does the mean abalone size appear to stabilize (i.e. all 10 values
+# are close to each other)? Does this match with another panel of the figure?
+#
+# They converge at the 500 sample size, and it's similar to the SD (Panel C)
+#
+#   
+# Although a larger sample size is always better, it costs money and time to collect
+# more data. Is there a sample size that might be a decent trade-off between maximize
+# sampling efficiency and to minimizing error?
+#
+# a sample size of 50 appears sufficient
+#
+
+##################################################################
+########### 2) Extracting model components ###################### 
+##################################################################
+
+set.seed(1)
+FakeData=data.frame(Time=rnorm(n=1000,mean=50,sd=5))
+FakeData$ConfidenceBeg=0+1.5*FakeData$Time+rnorm(n=1000,mean=0,sd=5)
+head(FakeData)
+
+#       Time ConfidenceBeg
+# 1 46.86773      75.97642
+# 2 50.91822      81.93698
+# 3 45.82186      64.37890
+# 4 57.97640      88.01826
+# 5 51.64754      77.81829
+# 6 45.89766      60.53324
+
+ggplot(data=FakeData,aes(x=Time,y=ConfidenceBeg))+
+  geom_point()
+
+fit=lm(ConfidenceBeg~Time,data=FakeData); summary(fit)
+
+# Call:
+#   lm(formula = ConfidenceBeg ~ Time, data = FakeData)
+# 
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -16.2422  -3.3598  -0.0688   3.7770  18.2216 
+# 
+# Coefficients:
+#              Estimate Std. Error t value Pr(>|t|)    
+# (Intercept) -0.40256    1.59708  -0.252    0.801    
+# Time         1.50643    0.03181  47.359   <2e-16 ***
+#   ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Residual standard error: 5.202 on 998 degrees of freedom
+# Multiple R-squared:  0.6921,	Adjusted R-squared:  0.6918 
+# F-statistic:  2243 on 1 and 998 DF,  p-value: < 2.2e-16
+
+## Testing for normality ##
+par(mfrow=c(2,2)) #make a 2x2 matrix of plotsd
+plot(fit) #make 4 diagnostic plots
