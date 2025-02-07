@@ -1,6 +1,6 @@
-lapply(c("tidyverse","ggthemes","lme4","ggpubr"),require,character.only=T) #load packages
-#setwd("c:/marm/teaching/286/lecture R code/")
-m=read.csv("RegressionDataCrickets.csv") #read in the data
+lapply(c("tidyverse","ggthemes","lme4","ggpubr","here"),require,character.only=T) #load packages
+
+m=read.csv(here("data/Lectures/RegressionDataCrickets.csv")) #read in the data
 ggplot(m,aes(x=TempF,y=ChirpsPerMin))+theme_few()+
   geom_point(size=3)+stat_smooth(method="lm")+
   xlab("Temperature(F)")+ylab("Chirps per minute")

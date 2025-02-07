@@ -1,6 +1,6 @@
 #Part 4.r
-lapply(c("tidyverse","ggthemes","ggpubr","emmeans","car","GGally"),require,character.only=T) #load packages
-setwd("c:/marm/teaching/286/lecture R code/")
+lapply(c("tidyverse","ggthemes","ggpubr","emmeans","car","GGally","here","viridis"),require,character.only=T) #load packages
+#setwd("c:/marm/teaching/286/lecture R code/")
 
 #Cricket Temp & Female density w/ no correlation among predictors
 #Create data
@@ -14,7 +14,7 @@ ggplot(m,aes(y=SingRate,x=Temp))+theme_few()+
   geom_point(aes(col=FemDens),size=3)+
   theme(text=element_text(size=20))+
   stat_smooth(method="lm")+labs(x="Temperature",y="Singing Rate")+
-  scale_color_gradientn(colors = rainbow(4))
+  scale_color_gradientn(colors = viridis(4))
 
 #Analyze data: Singing rate vs Temp
 M_Temp=lm(SingRate~Temp,data=m);summary(M_Temp) #Model with just Temp
@@ -34,14 +34,14 @@ m_Temp_FemDens=lm(SingRate~Temp+FemDens,data=m); summary(m_Temp_FemDens)
 
 #Plot data and model: Singing rate vs Female density
 FemDensv=seq(min(m$FemDens),max(m$FemDens),by=0.1);Temps=62:67
-nd1=data.frame(Temp=rep(Temps,length(FemDensv)),FemDens=rep(FemDensv,length(Temps)))
+nd1=data.frame(Temp=rep(Temps,length(FemDensv)),FemDens=rep(FemDensv,each = length(Temps)))
 nd1$SingRate=predict(m_Temp_FemDens,newdata=nd1)
 ggplot(m,aes(y=SingRate,x=FemDens))+theme_few()+
   geom_point(aes(col=Temp),size=3)+
   theme(text=element_text(size=20))+
   labs(x="Female Density",y="Singing Rate")+
   geom_line(data=nd1,mapping=aes(x=FemDens,y=SingRate,col=Temp,group=Temp))+
-  scale_color_gradientn(colors = rainbow(4))
+  scale_color_gradientn(colors = viridis(4))
 
 #Plot correlation among predictors
 ggplot(m,aes(y=Temp,x=FemDens))+geom_point(size=3)+theme_few()+
@@ -50,7 +50,7 @@ ggplot(m,aes(y=Temp,x=FemDens))+geom_point(size=3)+theme_few()+
   ggpubr::stat_cor(label.x = 31, label.y = 63,size=6)
 
 #Elephant seal Sex-specific growth
-m=read.csv("NSFRoD2022_Deployment_Summary_RSB.csv")
+m=read.csv(here("data/Lectures/NSFRoD2022_Deployment_Summary_RSB.csv"))
 head(m[,c("Seal.ID","Sex","Age","DeploymentMass")])
 
 #Simple plot of data
