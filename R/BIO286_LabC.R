@@ -1,6 +1,7 @@
 ########################################################################################################
 ########################################################################################################
 ############################# BIOE 286 - Lab C #########################################################
+#############################   Vince Weber    #########################################################
 ########################################################################################################
 ########################################################################################################
 
@@ -248,3 +249,24 @@ ggplot(data=FakeData,aes(x=Time,y=ConfidenceBeg))+geom_point()+
   geom_smooth(method="lm",colour="purple")+
   stat_cor(label.y = c(100),color="purple")+
   stat_regline_equation(label.y = c(105),color="purple")
+
+# adding a group for advanced coders
+FakeData$ConfidenceAdv=75+0.5*FakeData$Time+rnorm(n=1000,mean=0,sd=5)
+
+# pivot to long form taking confidence differences Beg to Avg into a single column
+FakeDataLong=pivot_longer(FakeData,cols=c("ConfidenceBeg","ConfidenceAdv"),
+                          names_to="Group",values_to="Confidence")
+
+# plot showing confidence difference in beginner and advance groups over time
+ggplot(data=FakeDataLong,aes(x=Time,y=Confidence,fill=Group))+
+  geom_point(aes(color=Group))+
+  geom_smooth(aes(color=Group,fill=Group),method="lm")+
+  stat_cor(label.x=c(55,55),label.y = c(50,60),aes(color=Group))+
+  stat_regline_equation(label.x=c(55,55),label.y = c(55,65),aes(color=Group))
+
+# fit for advanced
+fit2=lm(Confidence~Time,subset(FakeDataLong,Group=="ConfidenceAdv"))
+summary(fit2)
+# fit for time:group interaction
+fit3=lm(Confidence~Time*Group,FakeDataLong)
+summary(fit3)
