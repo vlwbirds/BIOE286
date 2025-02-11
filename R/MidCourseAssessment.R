@@ -207,8 +207,8 @@ df <- read_csv(here("data/Lectures/NSFRoD2022_Deployment_Summary_RSB.csv"))
 # (feel free to either fill in a single number, or include multiple numbers in each cell to show us how you calculated e.g., intercept for males in the interactive model). 
 
 # Additive model
-m2 <- lm(StandardLength ~ Age + Sex, data = df)
-summary(m2)
+m1 <- lm(StandardLength ~ Age + Sex, data = df)
+summary(m1)
 
 # Residuals:
 #   Min      1Q  Median      3Q     Max 
@@ -258,13 +258,73 @@ summary(m2)
 # Intercept for Females: 144.775
 # 
 # 
-# N. Make a ggplot of Standard Length ~ Age with color=Sex. Manually add two best fit lines (one for males and one for females) 
-# FROM THE ADDITIVE MODEL using the slopes and intercepts in the table (hint: use geom_abline() with inputs slope=…, intercept=…, color=…).  
+# N. Make a ggplot of Standard Length ~ Age with color=Sex. 
+# Manually add two best fit lines (one for males and one for females) 
+# FROM THE ADDITIVE MODEL using the slopes and intercepts in the table 
+# (hint: use geom_abline() with inputs slope=…, intercept=…, color=…).  
+
+sl <- ggplot(df, aes(Age, StandardLength, color = Sex)) +
+  geom_point() +
+  geom_abline(slope = 31.213, intercept = 143.744, color = "#F8766D") + #female
+  geom_abline(slope = 31.213, intercept = 150.057, color = "#00BFC4") + #male
+  labs(x = "Age (years)", y = "Length (cm)") +
+  theme_minimal()
+
+sl
+
 # 
-# O. Make a ggplot of Standard Length ~ Age with color=Sex. Manually add two best fit lines (one for males and one for females) FROM THE INTERACTIVE MODEL using the slopes and intercepts in the table (hint: use geom_abline() with inputs slope=…, intercept=…, color=…).  
-# P. Make a ggplot of Standard Length ~ Age with color=Sex. Add best fit lines by adding geom_smooth(method=”lm”) to the plot. Does this plot look the same as your additive model plot or your interactive model plot? 
-#   Q. How do the male and female lines differ in the additive model? How do they differ in the interactive model? What do these two models suggest about the increase in length with age and sex?
-#   R. Which model (additive or interactive) should you use and why? Please save your plot for that model as a high resolution .png file. 
-# S. In your code, include a commented line with this sentence (which could be a sentence in the results section of a paper), but with the blanks filled: “The __________ [additive or interactive] model suggests that males are ______cm (95% CI: ______ to ______ cm) ___________ [longer or shorter] across all ages. Growth rates for both males and females are __________ centimeters per year (95% CI __________ to ______ cm) (Figure 1). 
-# T. Upload your three .png figures (virus time series, virus comparison, seal length model) to the Canvas Discussion Board (link is in the Canvas Assignment). 
+# O. Make a ggplot of Standard Length ~ Age with color=Sex. 
+# Manually add two best fit lines (one for males and one for females) 
+# FROM THE INTERACTIVE MODEL using the slopes and intercepts in the table 
+# (hint: use geom_abline() with inputs slope=…, intercept=…, color=…).  
+
+sl2 <- ggplot(df, aes(Age, StandardLength, color = Sex)) +
+  geom_point() +
+  geom_abline(slope = 30.525, intercept = 144.775, color = "#F8766D") + #female
+  geom_abline(slope = 31.9, intercept = 149.025, color = "#00BFC4") + #male
+  labs(x = "Age (years)", y = "Length (cm)") +
+  theme_minimal()
+
+sl2
+
+# P. Make a ggplot of Standard Length ~ Age with color=Sex. 
+# Add best fit lines by adding geom_smooth(method=”lm”) to the plot. 
+# Does this plot look the same as your additive model plot or your interactive model plot? 
+
+# length with age and lm
+sl3 <- ggplot(df, aes(Age, StandardLength, color = Sex)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(x = "Age (years)", y = "Length (cm)") +
+  theme_minimal()
+
+sl3 # looks like the interactive model
+
+#   Q. How do the male and female lines differ in the additive model? 
+#       They are parallel with different intercepts
+
+#      How do they differ in the interactive model? 
+#.      Different intercepts, and a steeper slope for males
+
+#.     What do these two models suggest about the increase in length with age and sex?
+#       The models suggest that males are larger, and that males may grow at a faster rate than females.
+#
+#   R. Which model (additive or interactive) should you use and why? 
+#.     Please save your plot for that model as a high resolution .png file. 
+#          I'd use the additive model because the p values for sex and age are more significant, and the interactive model doesn't have that for males.
+
+# saving Additive model
+ggsave("output/SealLength_Additive.png", sl , width = 8, height = 6, dpi = 300)
+
+confint(m1, level = 0.95)
+# S. In your code, include a commented line with this sentence 
+#.   (which could be a sentence in the results section of a paper), but with the blanks filled: 
+#.  
+#    “The additive model suggests that males are 6.313 cm 
+#.   (95% CI: 0.099 to 12.525 cm) longer across all ages. 
+#.   Growth rates for both males and females are 31.213 centimeters per year 
+#.   (95% CI 28.434 to 33.991 cm) (Figure 1). 
+# 
+# T. Upload your three .png figures (virus time series, virus comparison, seal length model) 
+#.   to the Canvas Discussion Board (link is in the Canvas Assignment). 
 # 
