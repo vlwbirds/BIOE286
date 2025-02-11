@@ -98,16 +98,67 @@ ggsave("output/Virus_RNA_Relationship.png", rsv_inf, width = 8, height = 6, dpi 
 # G. Analyze the data using a linear model with the RNA of Influenza as the predictor and RNA of RSV as the response variable 
 # (think carefully about model structure, which should be lm(y~x)). 
 # What does the analysis suggest about the relationship between RNA of Influenza and RNA of RSV? 
+#
+# The relationship between RSV and Inf_A suggests that they are positively correlated, rising at relatively the same time in the year. When one rises so does the other. 
+#
 # Is there a clear relationship between the two viruses or is it likely due to chance?
+
+# There is a clear positive relationship that is very likely is not due random chance.
 #   
+
+m1 <- lm(RSV_gc_g_dry_weight ~ Influenza_A_gc_g_dry_weight, data = ww); summary(m1)
+
+# Call:
+#   lm(formula = RSV_gc_g_dry_weight ~ Influenza_A_gc_g_dry_weight, 
+#      data = ww)
+# 
+# Residuals:
+#   Min     1Q Median     3Q    Max 
+# -62235  -5557  -5557   1776 255471 
+# 
+# Coefficients:
+#                                Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)                   5.557e+03  1.003e+03   5.538 5.46e-08 ***
+#   Influenza_A_gc_g_dry_weight 5.113e-01  3.603e-02  14.190  < 2e-16 ***
+#   ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Residual standard error: 19240 on 411 degrees of freedom
+# (2 observations deleted due to missingness)
+# Multiple R-squared:  0.3288,	Adjusted R-squared:  0.3272 
+# F-statistic: 201.4 on 1 and 411 DF,  p-value: < 2.2e-16
+
+
 #   H. How much of the variation in RSV RNA is explained by variation in Influenza RNA? Most of it? A small amount?
+#
+#       Most of the relationship in RSV is explained by variation in Inf_A.
 #   
-#   I. What is the slope of the relationship between RNA of Influenza and RNA of RSV? What is the uncertainty in the slope? What is the approximate 95% CI of the slope? 
+#   I. What is the slope of the relationship between RNA of Influenza and RNA of RSV? 
+
+# slope = 5.113e-01
+
+#      What is the uncertainty in the slope? 
+
+# uncertainty = 3.603e-02 = SE
+#       
+#      What is the approximate 95% CI of the slope? 
+5.113e-01 + (2 * 3.603e-02) # 0.58336
+5.113e-01 - (2 * 3.603e-02) # 0.43924
+confint(m1, level = 0.95) # Influenza_A_gc_g_dry_weight    0.44046    0.5821131
+
 #   
 #   J. If you wanted to have a more precise measurement of the slope, what are two things you could do to make the uncertainty in the slope smaller?
+
+#          More data points
+#          Remove outliers
 #   
 #   K. What are the four assumptions of the regression analysis you did and does the analysis meet or likely not meet each of these assumptions? Add a comment with your assessments.
-# 
+
+#          Linearity - there is a linear relationship between x and y
+#          Independence - there are differences in the residuals
+#          Homoscedasticity - there is constant variance in the data
+#          Normality - data follow a normal distribution
+#
 # L. Add the slope, intercept, and R2 to the plot you made of Influenza vs RSV RNA. Here’s one way to add these elements if you’re using ggplot (add this after a +):
 #   
 #   #Note: after_stat() pulls the calculated values (rr.label is R2, p.labl is P-value), the “sep=” separates the R2 and P-value by a comma and a space (the “~”).
