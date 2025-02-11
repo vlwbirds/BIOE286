@@ -29,6 +29,7 @@ ww <- ww %>%
   select(RSV_gc_g_dry_weight, 
          Influenza_A_gc_g_dry_weight, 
          Collection_Date)
+
 # (hint: you can use Tidyverse piping and select, or column indexing with df[,c("col1","col2") ).
 # 
 # 
@@ -40,29 +41,64 @@ ww <- ww %>%
 # convert to date format   
 ww$Collection_Date=as.Date(ww$Collection_Date,format="%m/%d/%Y") #Date format - 4 digit yr, dashes
 
-# You can make this plot either in ggplot by making a new “longer” dataframe that has RNA of the two viruses (Influenza and RSV) in a single column, or by using base plot (there are multiple ways to do this, as always!).
+# You can make this plot either in ggplot by making a new “longer” dataframe that has RNA of the two viruses 
+# (Influenza and RSV) in a single column, or by using base plot (there are multiple ways to do this, as always!).
 
 # long form for viruses
 ww_long <- pivot_longer(ww, c("RSV_gc_g_dry_weight", "Influenza_A_gc_g_dry_weight"), names_to = "virus", values_to = "weight")
 
 # plot virus by date
-v_date <- ggplot(ww_long, aes(Collection_Date, weight)) +
+v_dat <- ggplot(ww_long, aes(Collection_Date, weight, fill = virus)) +
   theme_minimal() +
-  geom_point() +
-  geom_jitter() +
-  labs(x = "Collection Date", y = "Viral Weight") +
+  geom_point(aes(color=virus)) +
+  scale_x_date(date_breaks="1 month",date_labels = "%b-%d") +
+  scale_fill_manual(values = c("RSV_gc_g_dry_weight" = "brown", "Influenza_A_gc_g_dry_weight" = "blue"),# not my favorite color scheme
+                    labels = c("RSV_gc_g_dry_weight" = "RSV", "Influenza_A_gc_g_dry_weight" = "Influenza A")) +
+  scale_color_manual(values = c("RSV_gc_g_dry_weight" = "brown", "Influenza_A_gc_g_dry_weight" = "blue"), 
+                     labels = c("RSV_gc_g_dry_weight" = "RSV", "Influenza_A_gc_g_dry_weight" = "Influenza A")) +
+  labs(x = "Collection Date (April 2022 - August 2023)", y = "Virus Dry Weight (grams dry weight)") # not exactly sure what the specific unit of measure is
   
   
-v_date
+v_dat
+
+ggsave("VirusWeight_RSV_InfA.png", v_dat, path = here("output/VirusWeight_RSV_InfA.png"))
+
 # In ggplot, one nice trick for making Date axes have the writing spacing and format is to use:  scale_x_date(date_breaks="1 month",date_labels = "%b-%d")
 # 
 # Google “strptime r” to see some different format options (e.g. “%b-%d”).
 # 
 # E. Do the amounts of Influenza RNA and RSV RNA show similar patterns or rising and falling over time? Add a comment in your code with your observations.
+#
+# The rise and fall of RSV and Influenza share a similar spike around Nov 1, 2022. RSV has a less dramatic spike over time than Influenza, and started to rise around Sep 1, a few months earlier.
 # 
-# F. Next, plot the data, with the RNA of Influenza on the x-axis and the RNA of RSV on the y-axis (you will need your data frame to be in the original “wide” format for this!). Please add a fitted linear regression model line to the plot and the 95% confidence interval. Make the plot your own (change the colors, point or line size, labels, title, etc) and save it as a high resolution .png file.
-# 
-# G. Analyze the data using a linear model with the RNA of Influenza as the predictor and RNA of RSV as the response variable (think carefully about model structure, which should be lm(y~x)). What does the analysis suggest about the relationship between RNA of Influenza and RNA of RSV? Is there a clear relationship between the two viruses or is it likely due to chance?
+# F. Next, plot the data, with the RNA of Influenza on the x-axis and the RNA of RSV on the y-axis (you will need your data frame to be in the original “wide” format for this!). 
+# Please add a fitted linear regression model line to the plot and the 95% confidence interval. 
+# Make the plot your own (change the colors, point or line size, labels, title, etc) and save it as a high resolution .png file.
+#
+rsv_inf <- ggplot(ww, aes(Influenza_A_gc_g_dry_weight, RSV_gc_g_dry_weight)) +
+  geom_point(color = "blue", size = 3, alpha = 0.7) +  # Customize point color and transparency
+  geom_smooth(method = "lm", color = "red", fill = "pink", se = TRUE, size = 1.2) +  # Linear model with confidence interval
+  labs(
+    title = "Relationship Between Influenza A and RSV RNA",
+    x = "Influenza A RNA (gc/g dry weight)",
+    y = "RSV RNA (gc/g dry weight)"
+  ) +
+  theme_minimal() +  # Clean theme
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+
+rsv_inf
+
+# Save as high-resolution PNG
+ggsave("output/Virus_RNA_Relationship.png", rsv_inf, width = 8, height = 6, dpi = 300)
+
+# G. Analyze the data using a linear model with the RNA of Influenza as the predictor and RNA of RSV as the response variable 
+# (think carefully about model structure, which should be lm(y~x)). 
+# What does the analysis suggest about the relationship between RNA of Influenza and RNA of RSV? 
+# Is there a clear relationship between the two viruses or is it likely due to chance?
 #   
 #   H. How much of the variation in RSV RNA is explained by variation in Influenza RNA? Most of it? A small amount?
 #   
