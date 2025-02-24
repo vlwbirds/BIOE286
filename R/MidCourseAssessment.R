@@ -61,7 +61,7 @@ v_dat <- ggplot(ww_long, aes(Collection_Date, weight, fill = virus)) +
   
 v_dat
 
-ggsave("VirusWeight_RSV_InfA.png", v_dat, path = here("output/VirusWeight_RSV_InfA.png"))
+ggsave("output/VirusWeight_RSV_InfA.png", v_dat , width = 8, height = 6, dpi = 300)
 
 # In ggplot, one nice trick for making Date axes have the writing spacing and format is to use:  scale_x_date(date_breaks="1 month",date_labels = "%b-%d")
 # 
@@ -129,11 +129,11 @@ m1 <- lm(RSV_gc_g_dry_weight ~ Influenza_A_gc_g_dry_weight, data = ww); summary(
 # F-statistic: 201.4 on 1 and 411 DF,  p-value: < 2.2e-16
 
 
-#   H. How much of the variation in RSV RNA is explained by variation in Influenza RNA? Most of it? A small amount?
+# H. How much of the variation in RSV RNA is explained by variation in Influenza RNA? Most of it? A small amount?
 #
 #       Most of the relationship in RSV is explained by variation in Inf_A.
 #   
-#   I. What is the slope of the relationship between RNA of Influenza and RNA of RSV? 
+# I. What is the slope of the relationship between RNA of Influenza and RNA of RSV? 
 
 #        slope = 5.113e-01
 
@@ -147,12 +147,12 @@ m1 <- lm(RSV_gc_g_dry_weight ~ Influenza_A_gc_g_dry_weight, data = ww); summary(
 confint(m1, level = 0.95) # Influenza_A_gc_g_dry_weight    0.44046    0.5821131, I like this way better because there's less likelihood for a simple math error.
 
 #   
-#   J. If you wanted to have a more precise measurement of the slope, what are two things you could do to make the uncertainty in the slope smaller?
+# J. If you wanted to have a more precise measurement of the slope, what are two things you could do to make the uncertainty in the slope smaller?
 
 #          More data points
 #          Remove outliers
 #   
-#   K. What are the four assumptions of the regression analysis you did and does the analysis meet or likely not meet each of these assumptions? Add a comment with your assessments.
+# K. What are the four assumptions of the regression analysis you did and does the analysis meet or likely not meet each of these assumptions? Add a comment with your assessments.
 
 #          Linearity - there is a linear relationship between x and y
 #          Independence - there are differences in the residuals
@@ -186,9 +186,7 @@ rsv_inf_R2 <- ggplot(ww, aes(Influenza_A_gc_g_dry_weight, RSV_gc_g_dry_weight)) 
     plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10) +
-      
-    
-  )
+      )
 
 rsv_inf_R2
 
